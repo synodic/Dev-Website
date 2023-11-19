@@ -1,0 +1,25 @@
+site:
+  title: Synodic Developer Documentation
+  url: https://synodic.dev
+  start_page: dev-website::index.adoc
+output:
+  dir: ./dist
+content:
+  sources: 
+  - url: .
+    start_path: docs
+    version: true
+  - url: https://github.com/Synodic-Software/Honesty.git
+    start_path: docs
+    version: true
+ui: 
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./ui
+runtime: # https://docs.antora.org/antora/latest/playbook/configure-runtime/
+    fetch: true 
+antora:
+  extensions:
+  - '@antora/lunr-extension'
+  - '@antora/collector-extension'

@@ -1,0 +1,5 @@
+name: dev-website
+title: Synodic Developer Documentation
+start_page: dev-website::index.adoc
+nav:
+- modules/ROOT/nav.adoc
